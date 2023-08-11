@@ -1,2 +1,2 @@
 # AuroraNSL
-Aurora prediction by neural symbolic learning
+Aurora prediction by neural symbolic learning.
