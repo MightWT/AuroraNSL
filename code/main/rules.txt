@@ -1,0 +1,11 @@
+likes(mary,food).
+left(object1,object2).
+right(object1,object2).
+above(object1,object2).
+below(object1,object2).
+front(object1,object2).
+behind(object1,object2).
+perpendicular(object1,object2).
+parallel(object1,object2).
+concentric(object1,object2).
+coincident(object1,object2).

@@ -1,0 +1,13 @@
+Variable Domain:
+x;
+y;
+lxy;
+rxy;
+Predicates:
+L, R
+Rules:
+Forall x,y L(x,y) is lxy.
+Forall x,y R(x,y) is rxy.
+Forall x,y L(x,y) implies R(y,x)
+Forall x,y R(x,y) implies L(y,x)
+Forall
