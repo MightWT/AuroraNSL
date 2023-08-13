@@ -39,6 +39,5 @@ def normalized_result(obj):
     x,y,z = read_pc(obj)
     obj_scaled = scale_range(obj)
     result = np.asarray(obj_scaled)
-    # result = np.transpose(result)
 
     return result
