@@ -154,38 +154,3 @@ def normalized_result(obj):
     # result = np.transpose(result)
 
     return result
-
-def generate_left():
-    object_path = ''
-
-    object_list = []
-    for file in os.listdir(object_path):
-        if file.endswith(".npy"):
-            object_list.append(file)
-
-    save_dir = ''
-    # initial target centroid location in x, y, z
-    icx1 = -100
-    icy1 = 0
-    icz1 = 0
-
-    icx2 = 100
-    icy2 = 0
-    icz2 = 0
-    for iter1, elem1 in enumerate(object_list):
-        for iter2, elem2 in enumerate(object_list):
-            if elem1 != elem2:
-                obj1 = np.load(object_path + elem1)
-                obj2 = np.load(object_path + elem2)
-                pobj1, pobj2 = initial_position(icx1,icy1,icz1,icx2,icy2,icz2,obj1,obj2)
-                for i in range(100,1000,200):
-                    tpobj2 = transformation(i,0,0,0,pobj2)
-                    con_objs = concatenate_result(pobj1,tpobj2)
-                    norm_con_objs = normalized_result(con_objs)
-                    print(norm_con_objs[100])
-                    save_npy(norm_con_objs,save_dir,str(i)+str(iter1)+str(iter2))
-
-    return
-
-
-generate_left()
